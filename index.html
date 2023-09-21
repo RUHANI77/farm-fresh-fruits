@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Farm Fresh Fruits</title>
     <!-- Tailwind and DaisyUI -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.7.5/dist/full.css"
@@ -32,6 +32,7 @@
             colors: {
               "gradient-start": "#FF8938",
               "gradient-end": "#F00",
+              "primary-color": "#F85559",
               clifford: "#da373d",
             },
           },
@@ -40,12 +41,88 @@
     </script>
     <style>
       .font-lato {
-        font-family: 'Lato', sans-serif;
+        font-family: "Lato", sans-serif;
       }
     </style>
   </head>
   <body class="font-lato">
-    <header></header>
+    <header class="container mx-auto my-12">
+      <!-- Navbar Container -->
+      <div
+        class="navbar bg-primary-color rounded-full text-white flex lg:justify-between"
+      >
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 font-medium text-lg">
+            <li><a>Home</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Shop</a></li>
+            <li><a>All Fruits</a></li>
+          </ul>
+        </div>
+        <div class="navbar-start lg:absolute">
+          <!-- drop down -->
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content text-black mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-medium text-lg"
+            >
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
+              <div
+                class="md:w-auto rounded-full flex gap-1 p-2 border-2 border-primary-color text-base"
+              >
+                <input
+                  type="text"
+                  placeholder="Search here"
+                  class="w-36 rounded-full"
+                />
+                <button>
+                  <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+                </button>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <!-- logo -->
+        <div>
+          <img src="./images/logo.png" alt="website-logo" />
+          <a class="font-bold text-lg lg:text-4xl">Farm Fresh Fruits</a>
+        </div>
+        <div
+          class="form-control hidden lg:flex justify-center text-center input w-24 md:w-auto rounded-full"
+        >
+          <div class="flex gap-2">
+            <input
+              type="text"
+              placeholder="Search here"
+              class="w-24 md:w-auto text-gray-600 border-white rounded-full p-2"
+            />
+            <button>
+              <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
     <main></main>
     <footer></footer>
   </body>
